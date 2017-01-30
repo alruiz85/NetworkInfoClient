@@ -127,15 +127,15 @@ public class JFrameClient extends javax.swing.JFrame {
         client = new TCPClient(getIpFromTextField(), new TCPClient.OnMessageReceived() {
             @Override
             public void messageReceived(String message) {
-                jTextAreaLog.append(message);
+                jTextAreaLog.append("\n" + message);
             }
         });
         client.start();
     }//GEN-LAST:event_jButtonStartActionPerformed
 
     private void jButtonGetRadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGetRadioActionPerformed
-        client.sendMessage("getRadio request");
-        jTextAreaLog.append("\n" + "getRadio request");
+        client.sendMessage("getRadio");
+        jTextAreaLog.append("\n" + "getRadio sended");
     }//GEN-LAST:event_jButtonGetRadioActionPerformed
 
     /**
